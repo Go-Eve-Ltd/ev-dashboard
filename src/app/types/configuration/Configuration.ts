@@ -16,7 +16,7 @@ import DomainConfiguration from "./DomainConfiguration";
 export interface Configuration {
   Advanced: AdvancedConfiguration;
   Authorization: AuthorizationConfiguration;
-  Domain: DomainConfiguration
+  Domain?: DomainConfiguration
   CentralSystemServer: CentralSystemServerConfiguration;
   Company: CompanyConfiguration;
   Asset: AssetConfiguration;
