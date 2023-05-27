@@ -11,10 +11,12 @@ import SiteAreaConfiguration from './SiteAreaConfiguration';
 import SiteConfiguration from './SiteConfiguration';
 import TenantConfiguration from './TenantConfiguration';
 import UserConfiguration from './UserConfiguration';
+import DomainConfiguration from "./DomainConfiguration";
 
 export interface Configuration {
   Advanced: AdvancedConfiguration;
   Authorization: AuthorizationConfiguration;
+  Domain?: DomainConfiguration
   CentralSystemServer: CentralSystemServerConfiguration;
   Company: CompanyConfiguration;
   Asset: AssetConfiguration;
