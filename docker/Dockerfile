@@ -17,7 +17,8 @@ COPY docker/config.json ./src/assets/config.json
 
 RUN npm run build:${build}
 
-FROM nginx:alpine
+# Use the current stable nginx release; rebuild with --pull so a cached old base image is not reused
+FROM nginx:stable-alpine
 
 RUN [ -e /etc/nginx/conf.d/default.conf ] && mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf-disabled
 COPY docker/nginx-dashboard.conf /etc/nginx/conf.d/dashboard.conf
